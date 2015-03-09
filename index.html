@@ -10,7 +10,7 @@
     <script src="js/jquery.js" type="text/javascript"></script>
     <script src="js/scroll.js" type="text/javascript"></script>
   </head>
-  <body>
+  <body id="#body">
     <div id="background_img">
       <img src="img/me.png">
     </div>
@@ -19,14 +19,14 @@
         <div class="centered_box first_box">
           <h1>EMILIANO MORGHEN</h1>
           <span>Changing our world, drop by drop</span><br/>
-          <a href="#about" class="link">ABOUT</a><a href="#contact" class="link">CONTACT</a>
+          <a href="#" class="link" data-href="#about">ABOUT</a><a href="#" class="link" data-href="#contact">CONTACT</a>
         </div>
       </div>
       <div class="page about_page light" id="about">
         <div class="centered_box">
           <h1>Hey! That's me!</h1>
           <p>I'm a joung web designer from <b>Rome</b> (IT).<br/> I'm in love, as you can see, with wide, clean and <b>fresh design</b>. I know how to work with people, how to motivate them and build <b>successfull project</b>.<br/>I'm the co-founder of the <b>Hyperion</b>, my web design agency, and until today we have worked several important customers from Rome.<br/><br/><span>Are you interested to have more information?</span><br/></p>
-          <a href="#contact" class="link">CONTACT ME</a>
+          <a href="#" class="link" data-href="#contact">CONTACT ME</a>
         </div>
       </div>
       <div class="page light" id="contact">
@@ -40,12 +40,15 @@
           </ul>
         </div>
       </div>
+      <div id="back_top">
+        <a href="#" class="link" data-href="#body"><i class="fa fa-angle-up"></i></a>
+      </div>
     </main>
     
     <script type="text/javascript">
       $(document).ready(function () {
         $(".link").click(function (){
-          $('body').scrollTo($(this).attr("href"));
+          $('body').scrollTo($(this).attr("data-href"));
         });
       });
     </script>

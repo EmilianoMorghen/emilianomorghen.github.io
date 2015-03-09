@@ -15,13 +15,16 @@ a {
   text-decoration: none;
   border: 1px #fafafa solid;
 }
-b, strong{font-weight: bold}
-.light a{
+b,
+strong {
+  font-weight: bold
+}
+.light a {
   background-color: rgba(250, 250, 250, 0.5);
   color: #455A64;
-  border-color:1px #fafafa solid;
+  border-color: 1px #fafafa solid;
 }
-.about_page.light a{
+.about_page.light a {
   background-color: rgba(250, 250, 250, 0.2);
   color: #fafafa;
 }
@@ -33,29 +36,33 @@ b, strong{font-weight: bold}
   border-color: #fafafa;
   color: #455A64;
 }
-.dark a{
+.dark a {
   color: #fafafa;
   border-color: #455A64;
 }
 .dark a:hover {
   border: 1px rgba(250, 250, 250, 0.2) solid;
 }
-p, span{
+p,
+span {
   font-size: 20px;
   font-weight: 100;
 }
-span{
+span {
   font-style: italic;
 }
-.dark h1, .dark p, .dark span, .dark a{
+.dark h1,
+.dark p,
+.dark span,
+.dark a {
   color: #EEEEEE !important;
 }
-p a{
+p a {
   border: none !important;
   padding: none !important;
   color: #9E9E9E !important;
 }
-p a:hover{
+p a:hover {
   border: none !important;
 }
 #background_img {
@@ -103,14 +110,22 @@ p a:hover{
   text-align: center;
 }
 .about_page {
-  background: #009688; /* Old browsers */
-  background: -moz-linear-gradient(-45deg,  #009688 0%, #00bcd4 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#009688), color-stop(100%,#00bcd4)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(-45deg,  #009688 0%,#00bcd4 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(-45deg,  #009688 0%,#00bcd4 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(-45deg,  #009688 0%,#00bcd4 100%); /* IE10+ */
-  background: linear-gradient(135deg,  #009688 0%,#00bcd4 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009688', endColorstr='#00bcd4',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background: #009688;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #009688 0%, #00bcd4 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #009688), color-stop(100%, #00bcd4));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg, #009688 0%, #00bcd4 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg, #009688 0%, #00bcd4 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg, #009688 0%, #00bcd4 100%);
+  /* IE10+ */
+  background: linear-gradient(135deg, #009688 0%, #00bcd4 100%);
+  /* W3C */
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#009688', endColorstr='#00bcd4', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
 }
 .about_page .centered_box {
   box-shadow: 0px 0px 0px 40px rgba(250, 250, 250, 0.3);
@@ -125,27 +140,26 @@ p a:hover{
   text-align: center;
   background: rgba(250, 250, 250, 0.5);
 }
-.centered_box.first_box h1{
+.centered_box.first_box h1 {
   color: #009688;
 }
-.centered_box.first_box span{
+.centered_box.first_box span {
   position: relative;
   color: #37474F;
   top: -20px;
 }
-.contact_list{
+.contact_list {
   position: relative;
   display: block;
   width: 90%;
-  padding: 0px;
 }
-.contact_list li{
+.contact_list li {
   position: relative;
   display: inline-block;
   list-style-type: none;
   margin-left: 20px;
-} 
-.contact_list li a{
+}
+.contact_list li a {
   display: block;
   position: relative;
   width: 40px;
@@ -157,18 +171,52 @@ p a:hover{
   color: #fafafa;
   border-radius: 30px;
 }
-.contact_list li a:hover{
-  background: #009688; /* Old browsers */
-  background: -moz-linear-gradient(-45deg,  #009688 0%, #00bcd4 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#009688), color-stop(100%,#00bcd4)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(-45deg,  #009688 0%,#00bcd4 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(-45deg,  #009688 0%,#00bcd4 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(-45deg,  #009688 0%,#00bcd4 100%); /* IE10+ */
-  background: linear-gradient(135deg,  #009688 0%,#00bcd4 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009688', endColorstr='#00bcd4',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  border:1px #fafafa solid;
+.contact_list li a:hover {
+  background: #009688;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #009688 0%, #00bcd4 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #009688), color-stop(100%, #00bcd4));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg, #009688 0%, #00bcd4 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg, #009688 0%, #00bcd4 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg, #009688 0%, #00bcd4 100%);
+  /* IE10+ */
+  background: linear-gradient(135deg, #009688 0%, #00bcd4 100%);
+  /* W3C */
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#009688', endColorstr='#00bcd4', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+  border: 1px #fafafa solid;
 }
-.contact_list li a i{
+.contact_list li a i {
   position: relative;
   line-height: 200%;
+}
+#back_top {
+  position: fixed;
+  z-index: 4000;
+  width: 40px;
+  height: 40px;
+  bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #009688;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #009688 0%, #00bcd4 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #009688), color-stop(100%, #00bcd4));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg, #009688 0%, #00bcd4 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg, #009688 0%, #00bcd4 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg, #009688 0%, #00bcd4 100%);
+  /* IE10+ */
+  background: linear-gradient(135deg, #009688 0%, #00bcd4 100%);
+  /* W3C */
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#009688', endColorstr='#00bcd4', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+  border: 1px #fafafa solid;
 }
