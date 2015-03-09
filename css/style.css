@@ -194,29 +194,3 @@ p a:hover {
   position: relative;
   line-height: 200%;
 }
-#back_top {
-  position: fixed;
-  z-index: 4000;
-  width: 40px;
-  height: 40px;
-  bottom: 0px;
-  margin-left: auto;
-  margin-right: auto;
-  background: #009688;
-  /* Old browsers */
-  background: -moz-linear-gradient(-45deg, #009688 0%, #00bcd4 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #009688), color-stop(100%, #00bcd4));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(-45deg, #009688 0%, #00bcd4 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(-45deg, #009688 0%, #00bcd4 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(-45deg, #009688 0%, #00bcd4 100%);
-  /* IE10+ */
-  background: linear-gradient(135deg, #009688 0%, #00bcd4 100%);
-  /* W3C */
-  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#009688', endColorstr='#00bcd4', GradientType=1);
-  /* IE6-9 fallback on horizontal gradient */
-  border: 1px #fafafa solid;
-}
