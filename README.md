@@ -12,7 +12,7 @@ Questo è il repo "master", non dovrà essere toccato direttamente ma solo trami
 6. Dopo di ciò aspettate che tutti i membri del team abbiano revisionato ed approvato tale pull request -nel frattempo continuate a lavorare ad altro, ricominciando- che verrà mergiata nel branch master da un utente che si occuperà di provvedere di togliere i possibili conflitti senza rompere nulla, tipo Me o Marco.
 
 ## Milestone
-Dobbiamo decidere come dividere le varie fasi del progetto creando delle Milestone dello stesso, cioè la milestone della V.01, la milestone della V.02, etc. così da poter smistare le issues, le idee e le varie to-do in base alla milestone su cui stiamo lavorando. (Esempio: >Hey ragazzi, ma perché non mettiamo un pene in home che gira? >Questa si può fare ma dopo, non è essenziale. >Ah ok la metto nella milestone V.03)
+Dobbiamo decidere come dividere le varie fasi del progetto creando delle Milestone dello stesso, cioè la milestone della V.01, la milestone della V.02, etc. così da poter smistare le issues, le idee e le varie to-do in base alla milestone su cui stiamo lavorando. (Esempio: >Hey ragazzi, ma perché non mettiamo un cubo in home che gira? >Questa si può fare ma dopo, non è essenziale. >Ah ok la metto nella milestone V.03)
 
 ## Issues
 Per ogni cazzata aprite Issues a palate mettendo le giuste label -così da poterle catalogare- e se è necessario assegnandola a qualche milestone e se è ancora più specifica a qualche utente. Le issues si trovano unicamente nel progetto originale e non nei vostri fork -altrimenti sai che casino-.
