@@ -1,8 +1,7 @@
 package com.museo.db;
 
-import com.museo.db.Service;
 import com.museo.data.in.InputBeaconId;
-import com.museo.data.out.ResultGetItemByBeacon;
+import com.museo.data.out.ResultGetAllRooms;
 import com.museo.data.out.ResultGetTag;
 import com.museo.data.out.ResultTestBeacon;
 
@@ -17,6 +16,11 @@ public class Facade {
 	public ResultGetTag getAllTags(){
 		Service s = new Service();
 		return s.getAllTags();
+	}
+	//created da Berbeglia Marco
+	public ResultGetAllRooms getAllRooms(){
+		Service s = new Service();
+		return s.getAllRooms();
 	}
 	
 }
