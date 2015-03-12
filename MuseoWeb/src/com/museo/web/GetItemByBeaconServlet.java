@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.google.gson.Gson;
 import com.museo.data.in.InputBeaconId;
 import com.museo.data.out.ResultGetItemByBeacon;
+import com.museo.data.out.ResultTestBeacon;
 import com.museo.db.Facade;
 
 /**
@@ -26,7 +27,7 @@ public class GetItemByBeaconServlet extends BaseServlet {
 		
 		Facade facade = new Facade();
 		
-		ResultGetItemByBeacon res = facade.getItemByBeacon(input);
+		ResultTestBeacon res = facade.getItemByBeacon(input);
 		
 		respondWithJsonOrFailWith500(gson, res, response);
 	}
