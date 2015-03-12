@@ -3,6 +3,8 @@
 	<name>MuseoWeb</name>
 	<comment></comment>
 	<projects>
+		<project>museoData</project>
+		<project>museoDB</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
