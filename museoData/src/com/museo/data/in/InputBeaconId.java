@@ -2,7 +2,7 @@ package com.museo.data.in;
 
 //Creato oggetto che sarà il beacon preso in input
 public class InputBeaconId {
-	private String idBeacon;
+	private String idBeacon; 
 
 	public String getIdBeacon() {
 		return idBeacon;
