@@ -47,5 +47,4 @@ public class Beacon {
 		this.mac_address = mac_address;
 	}
 	
-
 }

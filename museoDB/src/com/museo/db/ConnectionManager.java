@@ -10,7 +10,7 @@ public class ConnectionManager {
 	private static final String HOSTNAME = "127.0.0.1";
 	private static final String PORT = "3306";
 	private static final String DBNAME = "museo";
-	private static final String USERNAME = "root";
+	private static final String USERNAME = "armellini";
 	private static final String PASSWORD = "password";
 	
 	public static void main(String args[]){
