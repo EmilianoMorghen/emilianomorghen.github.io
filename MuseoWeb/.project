@@ -3,6 +3,8 @@
 	<name>MuseoWeb</name>
 	<comment></comment>
 	<projects>
+		<project>museoData</project>
+		<project>museoDB</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
@@ -33,4 +35,11 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>lib</name>
+			<type>2</type>
+			<location>C:/Users/Alessio/Documents/git/museo/MuseoWeb/WebContent/WEB-INF/lib</location>
+		</link>
+	</linkedResources>
 </projectDescription>

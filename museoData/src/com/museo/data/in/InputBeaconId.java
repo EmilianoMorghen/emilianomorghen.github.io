@@ -1,7 +1,10 @@
 package com.museo.data.in;
 
+import java.io.Serializable;
+
 //Creato oggetto che sarà il beacon preso in input
-public class InputBeaconId {
+public class InputBeaconId implements Serializable{
+	
 	private String idBeacon;
 
 	public String getIdBeacon() {
