@@ -5,6 +5,15 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.museo.data.Item;
+import com.museo.data.StatusCodes;
+import com.museo.data.in.InputBeaconId;
+import com.museo.data.out.ResultGetItemByBeacon;
+
+
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
@@ -26,61 +35,55 @@ public class Service {
 	private final String SELECT_ITEM_BY_BEACON = "SELECT * FROM beacon WHERE ID = ?";
 	private final String SELECT_ALL_TAGS = "SELECT ID, Denominazione FROM tag";
 	
-	public ResultTestBeacon getItemByBeacon(InputBeaconId input){
-		ResultTestBeacon res = new ResultTestBeacon();
+	public ResultGetItemByBeacon getItemByBeacon(InputBeaconId input){
+		ResultGetItemByBeacon res = new ResultGetItemByBeacon();
 		
 		PreparedStatement preparedStatement = null;
 		Connection conn = null;
 		ResultSet rs = null;
 		
 		try {
-			conn = ConnectionManager.getConnection();
-			preparedStatement = conn.prepareStatement(SELECT_ITEM_BY_BEACON);
-			preparedStatement.setString(1, input.getIdBeacon());
-			rs = preparedStatement.executeQuery();
+			conn = ConnectionManager.getConnection();								//Connessione al db
+			preparedStatement = conn.prepareStatement(SELECT_ITEM_BY_BEACON);		//Preparo la query
+			preparedStatement.setString(1,input.getIdBeacon());						//Passo parametri alla funzione 
+			rs = preparedStatement.executeQuery();									//Eseguo la query
 			
-			Beacon item = null;
+			Item item = null;														
 			
-			if (rs.next()) {
-				int  ID = rs.getInt("ID");
-				float posX = rs.getFloat("pos_x");
-				float posY = rs.getFloat("pos_y");
-				int codSala = rs.getInt("cod_sala");
-				String macAddress = rs.getString("MAC_address");
-
-				item = new Beacon(ID, posX, posY, codSala, macAddress);
-				res.setBeacon(item);
+			List<Item> lista = new ArrayList<Item>();								//Creo una lista di oggetti 
+			
+			while (rs.next()) {														//Ciclo tutti gli oggetti che trova 
+				item = new Item(rs.getInt("ID"), rs.getString("Descrizione"));		//Prende paramentri e assegna a oggetto item
+				lista.add(item);													//Riempie la lista di oggetti
 			}
-			
+			res.setResult(lista);													//Manda il risultato la lista 
 			res.setStatusCode(StatusCodes.OK);
 			
-		} catch (Exception e) {
-			res.setStatusCode(StatusCodes.GENERIC_ERROR);
-			e.printStackTrace();
-		}finally {
- 
-			if (preparedStatement != null) {
+		} catch (Exception e) {														//Gestisce errori
+			res.setStatusCode(StatusCodes.GENERIC_ERROR);							//
+			e.getStackTrace();														//
+		}finally {																	//
+			
+			if (preparedStatement != null) {										//
 				try {
-					preparedStatement.close();
-				} catch (SQLException e) {
-					res.setStatusCode(StatusCodes.GENERIC_ERROR);
-					e.printStackTrace();
+					preparedStatement.close();										//
+				} catch (SQLException e) {											//
+					res.setStatusCode(StatusCodes.GENERIC_ERROR);					//
+					e.getStackTrace();												//
 				}
 			}
  
-			if (conn != null) {
+			if (conn != null) {														//
 				try {
-					conn.close();
-				} catch (SQLException e) {
-					res.setStatusCode(StatusCodes.GENERIC_ERROR);
-					e.printStackTrace();
+					conn.close();													//Chiude connessione al db
+				} catch (SQLException e) {											//
+					res.setStatusCode(StatusCodes.GENERIC_ERROR);					//
+					e.getStackTrace();
 				}
 			}
-
 		}
-		
-		return res;
 	}
+
 	
 	// Realizzato da Kevin Midolo
 	public ResultGetTag getAllTags(){
@@ -192,5 +195,5 @@ public class Service {
 		
 		return res;
 	}
-	
+
 }

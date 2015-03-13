@@ -7,7 +7,6 @@ public class Beacon {
 	private int cod_sala;
 	private String mac_address;
 	
-	
 	public Beacon(int id, float pos_x, float pos_y, int cod_sala,
 			String mac_address) {
 		super();
@@ -17,7 +16,6 @@ public class Beacon {
 		this.cod_sala = cod_sala;
 		this.mac_address = mac_address;
 	}
-	
 	public int getId() {
 		return id;
 	}
