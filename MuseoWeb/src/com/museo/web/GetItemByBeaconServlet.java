@@ -9,7 +9,10 @@ import javax.servlet.http.HttpServletResponse;
 import com.google.gson.Gson;
 import com.museo.data.in.InputBeaconId;
 import com.museo.data.out.ResultGetItemByBeacon;
+<<<<<<< HEAD
+=======
 import com.museo.data.out.ResultTestBeacon;
+>>>>>>> 6d5470eb3a29f5c592bdcda212d542480d4aa308
 import com.museo.db.Facade;
 
 /**
@@ -27,7 +30,11 @@ public class GetItemByBeaconServlet extends BaseServlet {
 		
 		Facade facade = new Facade();
 		
+<<<<<<< HEAD
+		ResultGetItemByBeacon res = facade.getItemByBeacon(input);				//Realizzata da Alessio Scoccia
+=======
 		ResultTestBeacon res = facade.getItemByBeacon(input);
+>>>>>>> 6d5470eb3a29f5c592bdcda212d542480d4aa308
 		
 		respondWithJsonOrFailWith500(gson, res, response);
 	}

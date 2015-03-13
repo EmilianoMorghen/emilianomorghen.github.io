@@ -1,12 +1,34 @@
+//Realizzata da Alessio Scoccia
 package com.museo.data;
 
 public class Item {
-	private double id;
-	private double cod_beacon;
+
+	private int id;
+	private Integer cod_beacon;
 	private String denominazione;
 	private String anno_prod;
 	private String descrizione;
 	private String url_esterno;
+
+	
+	public Item(int id, String descrizione) {
+		super();
+		this.id = id;
+		this.descrizione = descrizione;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public Integer getCod_beacon() {
+		return cod_beacon;
+	}
+	public void setCod_beacon(Integer cod_beacon) {
+		this.cod_beacon = cod_beacon;
+	}
+=======
 	
 	public double getId() {
 		return id;
@@ -20,6 +42,7 @@ public class Item {
 	public void setCod_beacon(double cod_beacon) {
 		this.cod_beacon = cod_beacon;
 	}
+>>>>>>> 6d5470eb3a29f5c592bdcda212d542480d4aa308
 	public String getDenominazione() {
 		return denominazione;
 	}
