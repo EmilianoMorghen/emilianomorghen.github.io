@@ -17,12 +17,14 @@ import com.museo.data.Tag;
 import com.museo.data.in.InputBeaconId;
 import com.museo.data.in.InputNewUser;
 import com.museo.data.in.InputRoomId;
+import com.museo.data.in.InputTagsId;
 import com.museo.data.in.InputUserId;
 import com.museo.data.out.ResultCreateNewUser;
 import com.museo.data.out.ResultGetAllRooms;
 import com.museo.data.out.ResultGetHistoryOrItinerary;
 import com.museo.data.out.ResultGetItemByBeacon;
 import com.museo.data.out.ResultGetItemsByCodiceSala;
+import com.museo.data.out.ResultGetItemsByTags;
 import com.museo.data.out.ResultGetRoomByBeacon;
 import com.museo.data.out.ResultGetTag;
 
@@ -51,6 +53,10 @@ public class Service {
 	
 	//Inserisce un nuovo utente
 	private final String INSERT_NEW_USER = "INSERT INTO utenti VALUES (null,?,?,?,?,?,?,CURRENT_TIMESTAMP)";
+	
+	//Restituisce la lista di oggetti data una lista di tag
+	//Questa query non è completa, vanno espressi ancora gli id dei tag che dovranno fare da "filtri" e poi va chiuso il tutto con ");"
+	private String SELECT_ITEMS_BY_TAGS = "SELECT O.ID, O.cod_beacon, O.Denominazione, O.Anno_produzione, O.Descrizione, O.Url_esterno FROM oggetti O, oggetto_tag OT WHERE O.ID = OT.cod_oggetto AND OT.cod_tag IN(";
 	
 	
 	//SELECT_ITEMS_BY_BEACON - Davide
@@ -502,6 +508,74 @@ public class Service {
 			if (preparedStatement != null) {
 				try {
 					preparedStatement.close();
+				} catch (SQLException e) {
+					res.setStatusCode(StatusCodes.GENERIC_ERROR);
+					e.printStackTrace();
+				}
+			}
+ 
+			if (conn != null) {
+				try {
+					conn.close();
+				} catch (SQLException e) {
+					res.setStatusCode(StatusCodes.GENERIC_ERROR);
+					e.printStackTrace();
+				}
+			}
+
+		}
+		
+		return res;
+	}
+	
+	public ResultGetItemsByTags getItemsByTags(InputTagsId input){
+		ResultGetItemsByTags res = new ResultGetItemsByTags();
+		
+		Statement statement = null;
+		Connection conn = null;
+		ResultSet rs = null;
+		
+		try {
+			
+			//Genero la query
+			SELECT_ITEMS_BY_TAGS = SELECT_ITEMS_BY_TAGS+"'"+input.getTagId(0)+"'";
+			int i = 1;
+			do{
+				SELECT_ITEMS_BY_TAGS = SELECT_ITEMS_BY_TAGS+",'"+input.getTagId(i)+"'";
+				i++;
+			}while(i < input.getListTags().size());
+			
+			SELECT_ITEMS_BY_TAGS = SELECT_ITEMS_BY_TAGS + ");";
+			
+			conn = ConnectionManager.getConnection();					// Provo a connettermi al database
+			statement = conn.createStatement();							// Preparo lo statement
+			rs = statement.executeQuery(SELECT_ITEMS_BY_TAGS);			// Faccio la query
+			
+			Item item = null;
+			List<Item> lista = new ArrayList<Item>();
+			
+			while (rs.next()) {
+				// Aggiunge l'oggetto alla lista
+				item = new Item(rs.getInt("O.ID"),rs.getInt("O.cod_beacon"),rs.getString("O.Denominazione"), rs.getInt("O.Anno_produzione"), rs.getString("O.Descrizione"), rs.getString("O.Url_esterno"));
+				lista.add(item);
+			}
+			
+			// Memorizza tutta la lista nella classe risultato
+			res.setItems(lista);
+			
+			// Restituisce codice stato
+			res.setStatusCode(StatusCodes.OK);
+
+			
+		// Gestisce le eccezioni
+		} catch (Exception e) {
+			res.setStatusCode(StatusCodes.GENERIC_ERROR);
+			e.printStackTrace();
+		}finally {
+ 
+			if (statement != null) {
+				try {
+					statement.close();
 				} catch (SQLException e) {
 					res.setStatusCode(StatusCodes.GENERIC_ERROR);
 					e.printStackTrace();
