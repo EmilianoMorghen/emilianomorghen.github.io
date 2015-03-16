@@ -4,15 +4,15 @@ package com.museo.data;
 public class Item {
 
 	private int id;
-	private int cod_beacon;
+	private Integer cod_beacon;
 	private String denominazione;
-	private int anno_prod;
+	private Integer anno_prod;
 	private String descrizione;
 	private String url_esterno;
 
 	
-	public Item(int id, int cod_beacon, String denominazione,
-			int anno_prod, String descrizione, String url_esterno) {
+	public Item(int id, Integer cod_beacon, String denominazione,
+			Integer anno_prod, String descrizione, String url_esterno) {
 		super();
 		this.id = id;
 		this.cod_beacon = cod_beacon;
