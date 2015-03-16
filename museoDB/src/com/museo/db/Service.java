@@ -37,7 +37,7 @@ public class Service {
 	private final String SELECT_ALL_ROOMS = "SELECT * FROM sale";
 	
 	//Restituisce tutti i dati degli oggetti appartenenti ad un determinato beacon
-	private final String SELECT_ITEMS_BY_BEACON = "SELECT O.ID, O.Descrizione FROM oggetti O WHERE cod_beacon = ?";
+	private final String SELECT_ITEMS_BY_BEACON = "SELECT O.* FROM oggetti O WHERE cod_beacon = ?";
 	
 	//Restituisce tutti i dati di tutti i tag
 	private final String SELECT_ALL_TAGS = "SELECT * FROM tag";
