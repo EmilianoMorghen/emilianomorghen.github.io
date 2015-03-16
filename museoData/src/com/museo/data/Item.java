@@ -6,21 +6,11 @@ public class Item {
 	private int id;
 	private Integer cod_beacon;
 	private String denominazione;
-	private Integer anno_prod;
+	private String anno_prod;
 	private String descrizione;
 	private String url_esterno;
 
 	
-	public Item(int id, Integer cod_beacon, String denominazione,
-			Integer anno_prod, String descrizione, String url_esterno) {
-		super();
-		this.id = id;
-		this.cod_beacon = cod_beacon;
-		this.denominazione = denominazione;
-		this.anno_prod = anno_prod;
-		this.descrizione = descrizione;
-		this.url_esterno = url_esterno;
-	}
 	public Item(int id, String descrizione) {
 		super();
 		this.id = id;
@@ -32,22 +22,37 @@ public class Item {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public int getCod_beacon() {
+	public Integer getCod_beacon() {
 		return cod_beacon;
 	}
-	public void setCod_beacon(int cod_beacon) {
+	public void setCod_beacon(Integer cod_beacon) {
 		this.cod_beacon = cod_beacon;
 	}
+=======
+	
+	public double getId() {
+		return id;
+	}
+	public void setId(double id) {
+		this.id = id;
+	}
+	public double getCod_beacon() {
+		return cod_beacon;
+	}
+	public void setCod_beacon(double cod_beacon) {
+		this.cod_beacon = cod_beacon;
+	}
+>>>>>>> 6d5470eb3a29f5c592bdcda212d542480d4aa308
 	public String getDenominazione() {
 		return denominazione;
 	}
 	public void setDenominazione(String denominazione) {
 		this.denominazione = denominazione;
 	}
-	public int getAnno_prod() {
+	public String getAnno_prod() {
 		return anno_prod;
 	}
-	public void setAnno_prod(int anno_prod) {
+	public void setAnno_prod(String anno_prod) {
 		this.anno_prod = anno_prod;
 	}
 	public String getDescrizione() {
