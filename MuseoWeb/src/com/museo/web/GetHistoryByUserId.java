@@ -7,28 +7,23 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.google.gson.Gson;
-import com.museo.data.in.InputBeaconId;
-import com.museo.data.out.ResultGetItemByBeacon;
-import com.museo.data.out.ResultTestBeacon;
+import com.museo.data.in.InputUserId;
+import com.museo.data.out.ResultGetHistoryOrItinerary;
 import com.museo.db.Facade;
 
-
-/**
- * Servlet implementation class GetItemByBeaconServlet
- */
-@WebServlet("/GetItemByBeacon")
-public class GetItemByBeaconServlet extends BaseServlet {
+@WebServlet("/GetHistory")
+public class GetHistoryByUserId extends BaseServlet {
 	private static final long serialVersionUID = 1L;
 
 	@Override
 	protected void doPost(Gson gson, HttpServletRequest request, HttpServletResponse response) throws IOException {
-		InputBeaconId input = parseJsonParamOrFailWith500(gson, InputBeaconId.class, request, response);
+		InputUserId input = parseJsonParamOrFailWith500(gson, InputUserId.class, request, response);
 		if (input == null)
 			return;
 		
 		Facade facade = new Facade();
-					//Realizzata da Alessio Scoccia
-		ResultGetItemByBeacon res = facade.getItemByBeacon(input);
+		
+		ResultGetHistoryOrItinerary res = facade.getHistory(input);
 		
 		respondWithJsonOrFailWith500(gson, res, response);
 	}
