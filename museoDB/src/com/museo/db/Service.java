@@ -37,7 +37,7 @@ public class Service {
 	private final String SELECT_ALL_ROOMS = "SELECT * FROM sale";
 	
 	//Restituisce tutti i dati degli oggetti appartenenti ad un determinato beacon
-	private final String SELECT_ITEMS_BY_BEACON = "SELECT O.* FROM oggetti O WHERE cod_beacon = ?";
+	private final String SELECT_ITEMS_BY_BEACON = "SELECT * FROM oggetti WHERE cod_beacon = ?";
 	
 	//Restituisce tutti i dati di tutti i tag
 	private final String SELECT_ALL_TAGS = "SELECT * FROM tag";
@@ -78,7 +78,7 @@ public class Service {
 			List<Item> lista = new ArrayList<Item>();								//Creo una lista di oggetti 
 			
 			while (rs.next()) {														//Ciclo tutti gli oggetti che trova 
-				item = new Item(rs.getInt("ID"), rs.getString("Descrizione"));		//Prende paramentri e assegna a oggetto item
+				item = new Item(rs.getInt("ID"), rs.getInt("cod_beacon"), rs.getString("Denominazione"), rs.getInt("Anno_produzione"), rs.getString("Descrizione"), rs.getString("Url_esterno"));
 				lista.add(item);													//Riempie la lista di oggetti
 			}
 			res.setResult(lista);													//Manda il risultato la lista 
