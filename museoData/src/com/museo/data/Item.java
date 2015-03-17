@@ -9,10 +9,10 @@ public class Item {
 	private int anno_prod;
 	private String descrizione;
 	private String url_esterno;
-
+	private float x;
+	private float y;
 	
-	public Item(int id, int cod_beacon, String denominazione,
-			int anno_prod, String descrizione, String url_esterno) {
+	public Item(int id, int cod_beacon, String denominazione, int anno_prod, String descrizione, String url_esterno, float x, float y) {
 		super();
 		this.id = id;
 		this.cod_beacon = cod_beacon;
@@ -20,6 +20,21 @@ public class Item {
 		this.anno_prod = anno_prod;
 		this.descrizione = descrizione;
 		this.url_esterno = url_esterno;
+		this.x = x;
+		this.y = y;
+	}
+	
+	public float getX() {
+		return x;
+	}
+	public void setX(float x) {
+		this.x = x;
+	}
+	public float getY() {
+		return y;
+	}
+	public void setY(float y) {
+		this.y = y;
 	}
 	public Item(int id, String descrizione) {
 		super();

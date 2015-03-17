@@ -12,7 +12,7 @@ import com.museo.data.in.InputTagsId;
 import com.museo.data.out.ResultGetItemsByTags;
 import com.museo.db.Facade;
 
-@WebServlet("/GetItemByTags")
+@WebServlet("/GetItemsByTags")
 public class GetItemsByTagsServlet extends BaseServlet{
 	private static final long serialVersionUID = 1L;
 

@@ -56,7 +56,7 @@ public class Service {
 	
 	//Restituisce la lista di oggetti data una lista di tag
 	//Questa query non è completa, vanno espressi ancora gli id dei tag che dovranno fare da "filtri" e poi va chiuso il tutto con ");"
-	private String SELECT_ITEMS_BY_TAGS = "SELECT O.ID, O.cod_beacon, O.Denominazione, O.Anno_produzione, O.Descrizione, O.Url_esterno FROM oggetti O, oggetto_tag OT WHERE O.ID = OT.cod_oggetto AND OT.cod_tag IN(";
+	private String SELECT_ITEMS_BY_TAGS = "SELECT O.ID, O.cod_beacon, O.Denominazione, O.Anno_produzione, O.Descrizione, O.Url_esterno, O.x, O.y FROM oggetti O, oggetto_tag OT WHERE O.ID = OT.cod_oggetto AND OT.cod_tag IN(";
 	
 	
 	//SELECT_ITEMS_BY_BEACON - Davide
@@ -78,7 +78,10 @@ public class Service {
 			List<Item> lista = new ArrayList<Item>();								//Creo una lista di oggetti 
 			
 			while (rs.next()) {														//Ciclo tutti gli oggetti che trova 
-				item = new Item(rs.getInt("ID"), rs.getString("Descrizione"));		//Prende paramentri e assegna a oggetto item
+				item = new Item(rs.getInt("ID"), rs.getInt("cod_beacon"), rs.getString("Denominazione"), 
+								rs.getInt("Anno_produzione"), rs.getString("Descrizione"), 
+								rs.getString("Url_esterno"), rs.getFloat("x"), rs.getFloat("y"));		
+																					//Prende paramentri e assegna a oggetto item
 				lista.add(item);													//Riempie la lista di oggetti
 			}
 			res.setResult(lista);													//Manda il risultato la lista 
@@ -131,8 +134,10 @@ public class Service {
 				int id = rs.getInt("ID");
 				String denominazione = rs.getString("Denominazione");
 				String descrizione = rs.getString("Descrizione");
+				float lunghezza = rs.getFloat("Lunghezza");
+				float altezza = rs.getFloat("Altezza");
 				
-				room = new Room(id,denominazione,descrizione);
+				room = new Room(id,denominazione,descrizione, lunghezza, altezza);
 				lista.add(room);		
 			}
 			res.setRooms(lista);;
@@ -183,10 +188,13 @@ public class Service {
 			Room room = null;
 			
 			if (rs.next()) {
-				int id = rs.getInt("id");
-				String denominazione = rs.getString("denominazione");		
-				String descrizione = rs.getString("descrizione");
-				room = new Room(id, denominazione, descrizione);
+				int id = rs.getInt("ID");
+				String denominazione = rs.getString("Denominazione");
+				String descrizione = rs.getString("Descrizione");
+				float lunghezza = rs.getFloat("Lunghezza");
+				float altezza = rs.getFloat("Altezza");
+				
+				room = new Room(id,denominazione,descrizione, lunghezza, altezza);
 				res.setRoom(room);
 			}
 			
@@ -250,9 +258,10 @@ public class Service {
 				int annoProd = rs.getInt("Anno_produzione");
 				String descrizione = rs.getString("Descrizione");
 				String urlEst = rs.getString("Url_esterno");
-				
+				float x = rs.getFloat("x");
+				float y = rs.getFloat("y");
 				// Crea un nuovo oggetto Item con la tupla presa
-				item = new Item(id,codBeacon,denominazione,annoProd,descrizione,urlEst);
+				item = new Item(id, codBeacon, denominazione, annoProd, descrizione, urlEst, x , y);
 				
 				// Aggiunge l'oggetto alla lista
 				lista.add(item);
@@ -375,8 +384,10 @@ public class Service {
 				int anno_prod = rs.getInt("Anno_produzione");
 				String descrizione = rs.getString("Descrizione");
 				String url_esterno = rs.getString("url_esterno");
+				float x = rs.getFloat("x");
+				float y = rs.getFloat("y");
 				
-				item = new Item(id, cod_beacon, denominazione, anno_prod, descrizione, url_esterno);
+				item = new Item(id, cod_beacon, denominazione, anno_prod, descrizione, url_esterno, x, y);
 				list.add(item);
 					
 			}
@@ -438,8 +449,10 @@ public class Service {
 				int anno_prod = rs.getInt("Anno_produzione");
 				String descrizione = rs.getString("Descrizione");
 				String url_esterno = rs.getString("url_esterno");
+				float x = rs.getFloat("x");
+				float y = rs.getFloat("y");
 				
-				item = new Item(id, cod_beacon, denominazione, anno_prod, descrizione, url_esterno);
+				item = new Item(id, cod_beacon, denominazione, anno_prod, descrizione, url_esterno, x, y);
 				list.add(item);
 					
 			}
@@ -556,7 +569,7 @@ public class Service {
 			
 			while (rs.next()) {
 				// Aggiunge l'oggetto alla lista
-				item = new Item(rs.getInt("O.ID"),rs.getInt("O.cod_beacon"),rs.getString("O.Denominazione"), rs.getInt("O.Anno_produzione"), rs.getString("O.Descrizione"), rs.getString("O.Url_esterno"));
+				item = new Item(rs.getInt("O.ID"),rs.getInt("O.cod_beacon"),rs.getString("O.Denominazione"), rs.getInt("O.Anno_produzione"), rs.getString("O.Descrizione"), rs.getString("O.Url_esterno"), rs.getFloat("O.x"), rs.getFloat("O.y"));
 				lista.add(item);
 			}
 			
