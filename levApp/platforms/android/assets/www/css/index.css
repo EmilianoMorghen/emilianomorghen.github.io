@@ -1,0 +1,79 @@
+body {
+	/* Setting body margins to 0 to have proper positioning of #container div */
+	margin: 0;
+}
+
+/* #container div with absolute position and 100% width and height so it takes up whole window */
+#container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+#mainPage {
+	
+}
+
+.style-color-unknown {
+	background: #d6d422;
+}
+
+.style-color-unknown-text {
+	color: rgb(255, 255, 255) !important;
+}
+
+.style-color-white, .style-color-transparent {
+	background: rgb(255, 255, 255);
+}
+
+.style-color-white-text, .style-color-transparent-text {
+	color: rgb(0, 0, 0) !important;
+}
+
+.style-color-mint {
+	/*background: #98c6a7;*/
+	background: rgb(215, 228, 177);
+}
+
+.style-color-mint-text {
+	color: rgb(0, 0, 0) !important;
+}
+
+.style-color-ice {
+	/*background: #9fddf9;*/
+	/*background: rgb(200,238,248);*/
+	background: rgb(165, 213, 209);
+}
+
+.style-color-ice-text {
+	color: rgb(0, 0, 0) !important;
+}
+
+.style-color-blueberry {
+	background: #5c58a7;
+}
+
+.style-color-blueberry-text {
+	color: rgb(0, 0, 0) !important;
+}
+
+.style-color-blueberry-dark {
+	background: #2d2756;
+}
+
+.style-color-blueberry-dark-text {
+	color: rgb(255, 255, 255) !important;
+}
+#generatedMap {
+	
+	width: 100% !important;
+	height: 100% !important;
+	padding: 0;
+	margin: 0;
+}
+.pallino {
+	background-color: red;
+	width: 15px;
+	height: 15px;
+	position: absolute;
+}

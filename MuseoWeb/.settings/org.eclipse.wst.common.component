@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="MuseoWeb">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module archiveName="museoData.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/museoData/museoData">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="museoDB.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/museoDB/museoDB">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="MuseoWeb"/>
+        <property name="java-output-path" value="/MuseoWeb/build/classes"/>
+    </wb-module>
+</project-modules>
