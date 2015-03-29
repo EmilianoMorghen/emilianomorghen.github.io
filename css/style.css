@@ -2,6 +2,34 @@
 
 @font-face{font-family:clearsans;src:url(../fonts/ClearSans-Bold.ttf);font-weight:600}@font-face{font-family:clearsans;src:url(../fonts/ClearSans-Medium.ttf);font-weight:400}@font-face{font-family:clearsans;src:url(../fonts/ClearSans-Light.ttf);font-weight:200}
 
+@keyframes appear {100% {opacity: 1;}}
+@-webkit-keyframes appear {100% {opacity: 1;}}
+@-moz-keyframes appear {100% {opacity: 1;}}
+
+@keyframes fadeIn {
+  100% {opacity: 1; margin-top: 20em;}
+}
+@-webkit-keyframes fadeIn {
+  100% {opacity: 1; margin-top: 20em;}
+}
+@-moz-keyframes fadeIn {
+  100% {opacity: 1; margin-top: 20em;}
+}
+
+.appear{
+  opacity: 0;
+  -webkit-animation:appear 1s linear forwards;
+  -moz-animation:appear 1s linear forwards;
+  animation:appear 1s linear forwards;
+}
+
+.fadeIn{
+  opacity: 0;
+  -webkit-animation:fadeIn 800ms ease-out forwards;
+  -moz-animation:fadeIn 800ms ease-out forwards;
+  animation:fadeIn 800s ease-out forwards;
+}
+
 body {
   background-color: #fafafa;
   color: #455A64;
@@ -74,6 +102,9 @@ p a:hover {
   text-align: right;
   background: #fafafa;
   overflow: hidden;
+  
+  /* For Intro only */
+  opacity: 0;
 }
 #background_img img {
   position: relative;
@@ -136,7 +167,8 @@ p a:hover {
 }
 .centered_box.first_box {
   width: 30%;
-  margin-top: 20em;
+  margin-top: 25em;
+  opacity: 0;
   text-align: center;
   background: rgba(250, 250, 250, 0.5);
 }
@@ -193,4 +225,86 @@ p a:hover {
 .contact_list li a i {
   position: relative;
   line-height: 200%;
+}
+
+/**************************
+**** INTRO ****************
+**************************/
+
+@keyframes rotation {
+    100% { 
+      -moz-transform: rotate(-360deg);
+      -webkit-transform: rotate(-360deg);
+      transform: rotate(-360deg); 
+    }
+}
+@-webkit-keyframes rotation {
+   100% { 
+      -moz-transform: rotate(-360deg);
+      -webkit-transform: rotate(-360deg);
+      transform: rotate(-360deg); 
+    }
+}
+@-moz-keyframes rotation {
+   100% { 
+      -moz-transform: rotate(-360deg);
+      -webkit-transform: rotate(-360deg);
+      transform: rotate(-360deg); 
+    }
+}
+@keyframes disappear {100% {opacity: 0;}}
+@-webkit-keyframes disappear {100% {opacity: 0;}}
+@-moz-keyframes disappear {100% {opacity: 0;}}
+
+#intro{
+  display: block;
+  position: fixed;
+  z-index: 4000;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  background: #fafafa;
+  color: #455A64;
+  text-align: center;
+}
+.disappear{
+  display: block;
+  opacity: 1;
+  -webkit-animation:disappear 1s linear forwards;
+  -moz-animation:disappear 1s linear forwards;
+  animation:disappear 1s linear forwards;
+}
+#loader::before{
+  content: "";
+  display: block;
+  position: relative;
+  z-index: 4001;
+  width: 2em;
+  height: 2em;
+  background: #455A64;
+  -webkit-animation:rotation 4s linear infinite;
+  -moz-animation:rotation 4s linear infinite;
+  animation:rotation 4s linear infinite;
+}
+#loader{
+  display: block;
+  position: relative;
+  width: 2em;
+  height: 2em;
+  margin-top: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  background: #fafafa;
+  border: 1px #455A64 solid;
+  padding: 10px;
+  -webkit-animation:rotation 4s linear infinite;
+  -moz-animation:rotation 4s linear infinite;
+  animation:rotation 4s linear infinite;
+}
+#stat{
+  display: block;
+  position: relative;
+  width: 100%;
+  text-align: center;
 }
