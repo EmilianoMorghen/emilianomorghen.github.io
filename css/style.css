@@ -64,13 +64,20 @@ body{
   border:5px #4dd0e1 solid;
   color: #80deea;
   font-size: 40px;
+  transition: color 500ms, border-color 1s;
+  -webkit-transition: color 500ms, border-color 1s;
+  -moz-transition: color 500ms, border-color 1s;
+}
+#first-page #down:hover{
+  color: #fafafa;
+  border-color: #fafafa;
 }
 
 #content{
   position: relative;
   width: 90%;
   margin-left: 100px;
-  overflow: hidden;
+  overflow-x: hidden;
   height: auto;
 }
 #content .section{
@@ -120,4 +127,14 @@ body{
 }
 #content #contact.section a{
   color: #009688;
+}
+#content #job.section {
+  border-left-color: #212121;
+  color: #212121;
+}
+#content #job.section .title{
+  background: #212121;
+}
+#content #job.section a{
+  color: #212121;
 }
