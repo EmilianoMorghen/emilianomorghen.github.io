@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>boker</title>
+  
+  <link rel="stylesheet" href="style.css" media="all"/>
+  <script type="text/javascript" src="jquery.js"></script>
+</head>
+<body>
+  <h1>Order your books easily and fast</h1>
+  <input type="text" id="elements" placeholder="1984, star wars the clone wars" autofocus>
+  <span class="explaination">Just type the name of the books separated by a comma</span>
+  <a href="#" id="order">Let's do it</a>
+  <div id="results"></div>
+  
+  <script type="text/javascript">
+    $(document).ready(function (){
+      $('#order').click(function (){
+        if(typeof $('#elements').val() !== undefined){
+          var titles = $('#elements').val().toLowerCase().split(','),
+              flag = true;
+          
+          for(var i = 0; i<titles.length; i++){
+            titles[i] = $.trim(titles[i]);
+          }
+          
+          titles.sort();
+          
+          var ordered = '';
+          titles.forEach(function(e, i){
+            ordered += '<p class="result"><span class="index">'+(i+1)+'</span> '+e+'</p>';
+          });
+          
+          $('#results').html(ordered).css('display','block');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
