@@ -1,140 +1,267 @@
-/* FONTS */
-
-@font-face {
-  font-family: roboto;
-  src: url(../fonts/Roboto-Regular.ttf);
-  font-weight: 400
-}
-@font-face {
-  font-family: roboto;
-  src: url(../fonts/Roboto-Thin.ttf);
-  font-weight: 200
-}
-@font-face {
-  font-family: roboto;
-  src: url(../fonts/Roboto-Bold.ttf);
-  font-weight: 600
-}
-
-/* FONTS' end */
-
+@font-face {font-family: robotoSlabBold; src: url(/fonts/RobotoSlab-Bold.ttf);}
+@font-face {font-family: robotoSlabLight; src: url(/fonts/RobotoSlab-Light.ttf);}
+@font-face {font-family: robotoLight; src: url(/fonts/Roboto-Light.ttf);}
+@font-face {font-family: roboto; src: url(/fonts/Roboto-Regular.ttf);}
+@font-face {font-family: robotoLightItalic; src: url(/fonts/Roboto-LightItalic.ttf);}
+@font-face {font-family: arciform; src: url(/fonts/Arciform.otf);}
+html{width:100%; overflow-x:hidden}
 body{
-  background: #fafafa;
-  font-family: roboto;
-  color: #212121;
+  background: #202020;
+  color: white;
+  width: 100%;
+  font-family: robotoSlabLight;
 }
 
-#first-page{
+.containerFull{
+  margin: 0 auto;
+  width: 100%;
+  padding: 0;
+}
+
+.section{
   position: relative;
   display: block;
-  margin-top: 0px;
-  padding-top: 1px;
+  padding-left: 100px;
+}
+
+.logo{
+  position: relative;
+  display: block;
+  background: #47b934;
+  text-align: center;
+  height: 50px;
+  width:50px;
+  font-family: robotoSlabBold;
+  font-size: 24pt;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.square{
+  width: 100px;
+  height: 100px;
+  border: 10px solid rgba(255,255,255,.3);
+}
+
+.title{
+  position: relative;
+  display: block;
+  font-family: arciform;
+  font-size: 36pt;
+  min-width: 550px;
+  z-index: 1000;
+  left: 25px;
+  top: -86px;
+}
+
+.special{
+  color:#47b934 !important;
+}
+
+.rect{
+  position: relative;
+  display: block;
+  width: 100px;
+  height: 10px;
+  background: #47b934;
+  margin-bottom: 100px;
+}
+.rect .special{
+  display: block;
+  position: relative;
+  width: 100%;
+  text-align: right;
+  margin-left: 50px;
+  top: -5px;
+  font-family: robotoSlabBold;
+  font-size: 9pt;
+  letter-spacing: 5px;
+}
+
+.firstImage{
+  max-height: 100%;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+.firstImage img{
+  width: auto;
+  height: 100%;
+  opacity: .5;
+}
+
+.divider{
+  position: relative;
+  display: block;
+  height: 10px;
+  width: 100%;
+  background: white;
+}
+
+.work{
+  margin-bottom: 200px;
+}
+
+.workImage{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  -webkit-box-shadow: 10px 10px 76px 1px rgba(0,0,0,.5);
+-moz-box-shadow: 10px 10px 76px 1px rgba(0,0,0,.5);
+box-shadow: 10px 10px 76px 1px rgba(0,0,0,.5);
+}
+
+.workImage.squareImage{
+  height: auto;
+}
+
+.workImage img{
+  width: 100%;
+  opacity: 0.9;
+}
+
+.workImage .overlay{
+  position: absolute;
+  top: 0;
   left: 0;
   width: 100%;
-  min-height: 100vh;
-  background: #00bcd4;
-  color: #fafafa;
-  text-align: center;
+  height: 100%; 
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-#first-page #logo{
-  position: relative;
-  display: inline-block;
-  border:10px #fafafa solid;
-  padding: 20px;
-  padding-left: 40px;
-  padding-right: 40px;
-  font-size: 80px;
-  margin-top: 15%;
+
+.workImage.squareImage .overlay{
+  height: 100%;
 }
-#first-page #motto{
-  position: relative;
-  display: block;
-  text-align: center;
-  font-size: 40px;
-  font-weight: 200;
-}
-#first-page #down{
+
+.workImage .overlay a{
   position: absolute;
-  display: block;
-  bottom: 100px;
-  width: 45px;
-  height: 45px;
-  margin-left: 48.5%;
+  color: #47b934;
+  font-family: robotoSlabBold;
+  text-transform:uppercase;
+  letter-spacing: 3px;
+  bottom: -23px;
+  width: 150px;
   text-align: center;
-  border:5px #4dd0e1 solid;
-  color: #80deea;
-  font-size: 40px;
-  transition: color 500ms, border-color 1s;
-  -webkit-transition: color 500ms, border-color 1s;
-  -moz-transition: color 500ms, border-color 1s;
-}
-#first-page #down:hover{
-  color: #fafafa;
-  border-color: #fafafa;
+  left: 50%;
+  margin-left: -75px;
+  padding: 10px;
+  background: white;
 }
 
-#content{
-  position: relative;
-  width: 90%;
-  margin-left: 100px;
-  overflow-x: hidden;
-  height: auto;
+.workImage.squareImage .overlay a{
+  bottom: 
 }
-#content .section{
-  position: relative;
-  height: auto;
-  border-left:20px solid;
-  padding: 100px;
-  padding-left: 50px;
-}
-#content .section .title{
-  position: relative;
-  display: inline-block;
-  padding: 20px;
-  color: #fafafa;
-  font-size: 30px;
-}
-#content .section p{
-  position: relative;
-  font-size: 48px;
-  font-weight: 200;
-  color: #424242;
-}
-#content .section a{
-  position: relative;
-  font-size: 72px;
-  font-weight: 600;
+
+.workImage .overlay a:hover{
+  background: #47b934;
   text-decoration: none;
+  color: white;
 }
 
-#content #about.section {
-  border-left-color: #00bcd4;
+.workSection{
+  text-align: right;
+  padding-left: 20px;
 }
-#content #about.section .title{
-  background: #00bcd4;
+
+.work.left .workSection{
+  text-align: left;
+  padding-right: 20px;
+  padding-left: 0;
 }
-#content #about.section a{
-  color: #00bcd4;
+
+.workSection .rect{
+  position: relative;
+  margin-bottom: 50px;
+  float: right;
 }
-#content #contact.section {
-  border-left-color: #009688;
-  font-size: 48px;
-  font-weight: 200;
-  color: #424242;
+
+.work.left .workSection .rect{
+  float: left;
 }
-#content #contact.section .title{
-  background: #009688;
+
+.workSection :not(.rect){
+  clear: right;
 }
-#content #contact.section a{
-  color: #009688;
+
+.work.left .workSection :not(.rect){
+  clear: left;
 }
-#content #job.section {
-  border-left-color: #212121;
-  color: #212121;
+
+.workSection .titleWork{
+  position: relative;
+  display: block;
+  font-family: arciform !important;
+  font-size: 30pt;
+  z-index: 1000;
 }
-#content #job.section .title{
-  background: #212121;
+
+.workSection .category{
+  position: relative;
+  margin-bottom: 30px;
+  font-family: robotoSlabBold;
+  color: #47b934;
+  letter-spacing: 5px;
 }
-#content #job.section a{
-  color: #212121;
+
+.workSection .category:before{
+  position: relative;
+  content: "in ― ";
+  color: rgba(255,255,255,.3);
+  font-family: robotoLightItalic;
+  letter-spacing: normal;
+  font-style: italic;
+  left: -5px;
+}
+
+.workSection .description{
+  color: rgba(255,255,255,.3);
+  font-family: robotoLight;
+}
+
+.comment{
+  font-family: robotoLightItalic;
+  color: rgba(255,255,255,.3);
+  font-size: 24pt;
+  margin-bottom: 100px;
+}
+
+.aboutPar{
+  font-family: roboto;
+  font-size: 12pt;
+  margin-bottom: 100px;
+}
+
+.aboutPar a{
+  color: #47b934;
+  font-family: robotoSlabLight;
+}
+
+i{
+  font-family: robotoLight;
+  color: rgba(255,255,255,.3)
+}
+
+#buttonCopy{
+  background: #202020;
+  border: none;
+  color: #47b934;
+  font-family: robotoSlabLight;
+  padding: 0;
+  margin: 0;
+}
+#buttonCopy:hover, .aboutPar a:hover{
+  text-decoration: none;
+  cursor: pointer;
+  background: #202020;
+  color: rgba(71, 185, 52, 0.2);
+}
+#status {
+  font-family: robotoLightItalic;
+  color: rgba(255,255,255,.3)
+}
+#invisible {
+  display: none;
 }
