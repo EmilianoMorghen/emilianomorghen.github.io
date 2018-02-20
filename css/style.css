@@ -265,3 +265,102 @@ i{
 #invisible {
   display: none;
 }
+
+@media only screen and (max-width: 425px) {
+  
+.section{
+  padding: 0;
+  box-sizing: border-box !important;
+  margin-left: 25px;
+}
+  
+.logo{
+  position: relative;
+  display: block;
+  background: #47b934;
+  text-align: center;
+  height: 50px;
+  width:50px;
+  font-family: robotoSlabBold;
+  font-size: 24pt;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.square{
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(255,255,255,.3);
+}
+
+.title{
+  position: relative;
+  display: block;
+  font-family: arciform;
+  font-size: 16pt;
+  min-width: 100%;
+  z-index: 1000;
+  left: 16px;
+  top: -40px;
+}
+  
+  .rect{
+    width: 50px;
+    height: 5px;
+    margin-bottom: 25px;
+  }
+  
+  .firstImage{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .firstImage img{
+    width: auto;
+    max-height: 300px !important;
+  }
+
+  .work{
+    margin-bottom: 100px;
+  }
+  
+  .workSection{
+    text-align: Center !important;
+    padding-left: 0;
+  }
+  .workSection .titleWork{
+    position: relative;
+    display: block;
+    font-family: arciform !important;
+    font-size: 14pt;
+    z-index: 1000;
+  }
+  
+  .workSection .category{
+    position: relative;
+    margin-bottom: 30px;
+    font-size: 8pt;
+    font-family: robotoSlabBold;
+    color: #47b934;
+    letter-spacing: 5px;
+  }
+
+  .workSection .category:before{
+    position: relative;
+    content: "in ― ";
+    color: rgba(255,255,255,.3);
+    font-family: robotoLightItalic;
+    letter-spacing: normal;
+    font-style: italic;
+    left: -5px;
+  }
+
+  .workSection .rect{opacity: 0;}
+  
+  .comment{
+    margin-bottom: 25px;
+    font-size: 10pt;
+  }
+
+}
