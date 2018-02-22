@@ -268,41 +268,41 @@ i{
 
 @media only screen and (max-width: 600px) {
   
-.section{
-  padding: 25px;
-  box-sizing: border-box !important;
-  margin: auto;
-}
-  
-.logo{
-  position: relative;
-  display: block;
-  background: #47b934;
-  text-align: center;
-  height: 50px;
-  width:50px;
-  font-family: robotoSlabBold;
-  font-size: 24pt;
-  margin-top: 0;
-  margin-bottom: 25px;
-}
+  .section{
+    padding: 25px;
+    box-sizing: border-box !important;
+    margin: auto;
+  }
 
-.square{
-  width: 50px;
-  height: 50px;
-  border: 5px solid rgba(255,255,255,.3);
-}
+  .logo{
+    position: relative;
+    display: block;
+    background: #47b934;
+    text-align: center;
+    height: 50px;
+    width:50px;
+    font-family: robotoSlabBold;
+    font-size: 24pt;
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
 
-.title{
-  position: relative;
-  display: block;
-  font-family: arciform;
-  font-size: 20pt;
-  min-width: 100%;
-  z-index: 1000;
-  left: 16px;
-  top: -40px;
-}
+  .square{
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255,255,255,.3);
+  }
+
+  .title{
+    position: relative;
+    display: block;
+    font-family: arciform;
+    font-size: 20pt;
+    min-width: 100%;
+    z-index: 1000;
+    left: 16px;
+    top: -40px;
+  }
   
   #titleFirst{
     position: absolute;
@@ -310,8 +310,7 @@ i{
     top: 8px
   }
   #rectFirst{
-    position: absolute;
-    top: 120px;
+    display: none;
   }
   
   .rect{
