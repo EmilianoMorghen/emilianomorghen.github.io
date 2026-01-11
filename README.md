@@ -5,7 +5,7 @@
 ### Front-End Developer | Open Source Enthusiast | Building Digital Solutions
 
 [![Website](https://img.shields.io/badge/-morghen.me-blue?style=for-the-badge&logo=google-chrome&logoColor=white)](https://morghen.me)
-[![LinkedIn](https://img.shields.io/badge/-Emiliano_Morghen-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/morghenme)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Emiliano_Morghen-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/morghenme)
 [![Location](https://img.shields.io/badge/📍-Rome,_Italy-red?style=for-the-badge)](https://github.com/EmilianoMorghen)
 
 </div>
