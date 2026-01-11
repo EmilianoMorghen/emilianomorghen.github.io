@@ -5,7 +5,7 @@
 ### Front-End Developer | Open Source Enthusiast | Building Digital Solutions
 
 [![Website](https://img.shields.io/badge/Portfolio-morghen.me-blue?style=for-the-badge&logo=google-chrome&logoColor=white)](https://morghen.me)
-[![GitHub](https://img.shields.io/badge/GitHub-EmilianoMorghen-181717?style=for-the-badge&logo=github)](https://github.com/EmilianoMorghen)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-EmilianoMorghen-181717?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/morghenme)
 [![Location](https://img.shields.io/badge/📍-Rome,_Italy-red?style=for-the-badge)](https://github.com/EmilianoMorghen)
 
 </div>
@@ -16,7 +16,8 @@
 
 I'm a passionate developer at **@translated**, crafting elegant solutions to complex problems. I believe in writing clean code, contributing to open source, and continuously learning new technologies.
 
-- 🔭 Currently working on innovative web applications
+- 🔭 Currently working on the most advanced translator in the world (@Lara)[https://laratranslate.com/translate]
+- 🤩 Functional programming enthusiast
 - 🌱 Exploring modern development practices and architectures
 - 💡 Love turning ideas into reality through code
 - 🎯 Open to collaborating on interesting projects
@@ -27,53 +28,19 @@ I'm a passionate developer at **@translated**, crafting elegant solutions to com
 
 ### Languages
 
-![](https://skillicons.dev/icons?i=html,css,js,ts,cs,python&theme=dark&perline=8)
+![](https://skillicons.dev/icons?i=html,css,js,ts&theme=light&perline=8)
 
 ### Frontend
 
-![](https://skillicons.dev/icons?i=react,tailwind,sass&theme=dark&perline=8)
+![](https://skillicons.dev/icons?i=react,tailwind,sass&theme=light&perline=8)
 
 ### Backend & Tools
 
-![](https://skillicons.dev/icons?i=nodejs,mongodb,mysql,postgres,docker,git,linux&theme=dark&perline=8)
-
----
-
-## 🌟 Featured Projects
-
-<table>
-<tr>
-<td width="50%">
-
-### 🌐 Personal Website
-
-[![](https://img.shields.io/badge/View-Repository-blue?style=for-the-badge&logo=github)](https://github.com/EmilianoMorghen/emilianomorghen.github.io)
-
-My personal portfolio showcasing projects, skills, and professional journey.
-
-**Tech:** HTML • CSS • JavaScript
-
-</td>
-<td width="50%">
-
-### ⚡ OpListSolution
-
-[![](https://img.shields.io/badge/View-Repository-blue?style=for-the-badge&logo=github)](https://github.com/EmilianoMorghen/OpListSolution)
-[![Stars](https://img.shields.io/github/stars/EmilianoMorghen/OpListSolution?style=social)](https://github.com/EmilianoMorghen/OpListSolution/stargazers)
-
-Enhanced C# list functionality for more powerful data operations.
-
-**Tech:** C# • .NET
-
-</td>
-</tr>
-</table>
-
----
+![](https://skillicons.dev/icons?i=nodejs,mongodb,mysql,postgres,docker,git,linux&theme=light&perline=8)
 
 ## 📈 Activity Graph
 
-![](https://github-readme-activity-graph.vercel.app/graph?username=EmilianoMorghen&theme=react-dark&hide_border=true&area=true)
+![](https://github-readme-activity-graph.vercel.app/graph?username=EmilianoMorghen&theme=github-light&hide_border=true&area=true)
 
 ---
 
